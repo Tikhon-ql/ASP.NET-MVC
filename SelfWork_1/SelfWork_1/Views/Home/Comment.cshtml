@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Comment";
+}
+@using SelfWork_1
+@model IEnumerable<SelfWork_1.Models.Comment>
+<main>
+    <ol>
+        @foreach (SelfWork_1.Models.Comment item in Model)
+        {
+            <li style="display:flex;">
+                <div style="justify-content:start;">
+                    <p>@item.Nickname:</p>
+                    <p>@item.Date</p>
+                </div>
+                <div style="justify-content:end;">
+                    <p>@item.Text</p>
+                </div> 
+            </li>
+        }
+    </ol>
+    <h4>Можете добавить свой комментарий</h4>
+
+    @using (Html.BeginForm())
+    {
+        @Html.Hidden("Date", Model.ToList().Count + 1);
+        <div class="input-group flex-nowrap">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">N</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Nickname" aria-label="Nickname" aria-describedby="addon-wrapping" name="Nickname" required>
+        </div>
+        <textarea name="Text" style="margin:3.5%;border-radius:5px;width:60%;height:120px;" required></textarea><hr/>
+        <input type="submit" style="margin:30px;"/>
+    }
+</main>
+

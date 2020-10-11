@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<OneRows>
+  <OneRow>
+    <Id>1</Id>
+    <DateOfMetting>23.06.18</DateOfMetting>
+    <FirstCommand>Франция</FirstCommand>
+    <SecondCommand>Сенегал</SecondCommand>
+  </OneRow>
+  <OneRow>
+    <Id>2</Id>
+    <DateOfMetting>24.06.18</DateOfMetting>
+    <FirstCommand>Исландия</FirstCommand>
+    <SecondCommand>Аргентина</SecondCommand>
+  </OneRow>
+  <OneRow>
+    <Id>3</Id>
+    <DateOfMetting>26.06.18</DateOfMetting>
+    <FirstCommand>Хорватия</FirstCommand>
+    <SecondCommand>Уругвай</SecondCommand>
+  </OneRow>
+  <OneRow>
+    <Id>4</Id>
+    <DateOfMetting>28.06.18</DateOfMetting>
+    <FirstCommand>Испания</FirstCommand>
+    <SecondCommand>Португалия</SecondCommand>
+  </OneRow>
+</OneRows>

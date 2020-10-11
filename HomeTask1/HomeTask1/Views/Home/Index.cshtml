@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@using HomeTask1
+@model IEnumerable<HomeTask1.Models.OneRow>
+<main style="display: flex;">
+    <img src="~/Content/Images/footballer.jpg" style="width: 30%; height: 50%;margin: 10px;justify-content: start;" />
+    <div style="justify-content: flex-end;display:flex;">
+        <table style="justify-content: flex-start;margin: 150px;font-size: 25px;">
+            <tr style="border: solid 5px;">
+                <th>Дата встречи</th>
+                <th>Команда 1</th>
+                <th>Команда 2</th>
+                <th>Сделай выбор</th>
+            </tr>
+            @foreach (HomeTask1.Models.OneRow item in Model)
+            {
+                <tr>
+                    <td>@item.DateOfMetting.ToShortDateString()</td>
+                    <td>@item.FirstCommand</td>
+                    <td>@item.SecondCommand</td>
+                    <td>
+                        <p>
+                            <a href="/Home/DoBet?Id=@item.Id&DateOfMetting=@item.DateOfMetting&FirstCommand=@item.FirstCommand&SecondCommand=@item.SecondCommand">ЖМИ</a>
+                        </p>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</main>
