@@ -1,5 +1,8 @@
 ﻿using SelfWork_1.Models;
-using SelfWork_1.Models.Contexts;
+using SelfWork_1.Models.Animals;
+using SelfWork_1.Models.Animals.Context;
+using SelfWork_1.Models.Comments;
+using SelfWork_1.Models.Comments.Context;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -7,6 +10,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.UI.WebControls;
+using System.IO;
 
 namespace SelfWork_1.Controllers
 {
@@ -16,6 +20,18 @@ namespace SelfWork_1.Controllers
         CommentsContext cdb = new CommentsContext();
         public ActionResult Index()
         {
+            //DirectoryInfo dir = new DirectoryInfo(Server.MapPath("~/Content/images"));
+            //foreach (FileInfo item in dir.GetFiles())
+            //{
+            //    using (MemoryStream ms = new MemoryStream())
+            //    {
+            //        System.Drawing.Image image = System.Drawing.Image.FromFile(item.FullName);
+            //        image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            //        Animal animal = adb.Animals.FirstOrDefault(a=>(a.Name).ToLower() + ".jpg" == item.Name);
+            //        animal.AnimalImage = ms.ToArray();
+            //    }
+            //    adb.SaveChanges();
+            //}
             return View(adb.Animals);
         }
         [HttpGet]

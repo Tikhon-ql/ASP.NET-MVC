@@ -8,67 +8,122 @@
     <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet">
     <title>@ViewBag.Title – приложение ASP.NET</title>
     <style>
-        body {
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-        }
+            body {
+                background-repeat: no-repeat;
+                background-size:cover;
+                background-attachment: fixed;
+            }
 
-        main {
-            background-color: #AAF0D1;
-            margin: auto;
-            width: 80%;
-            margin-top: 50px;
-            border-radius: 10px;
-            margin-bottom: 50px;
-        }
+            main {
+                background-color: #AAF0D1;
+                margin: auto;
+                width: 80%;
+                margin-top: 50px;
+                border-radius: 10px;
+                margin-bottom: 50px;
+            }
+            .navbar{
+                background: rgba(0,0,0,0.5);
+            }
+            progress {
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 5px;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                border: none;
+                background: transparent;
+                color: #002c68;
+            }
+
+            progress::-webkit-progress-bar {
+                background: transparent;
+                border-radius: 5px;
+            }
+
+                progress::-webkit-progress-value {
+                    background: linear-gradient(to right, #FA3D00,#7D05FF);
+                    border-radius: 5px;
+                }                      
+
+                progress::-moz-progress-bar {
+                    background: linear-gradient(to right, #FA3D00,#7D05FF);
+                    border-radius: 5px;
+                }
+
+                .progress-container {
+                    width: 100%;
+                    background: transparent;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    height: 5px;
+                    display: block;
+                }
+
+                .progress-bar {
+                    background: #002c68;
+                    width: 0%;
+                    display: block;
+                    height: inherit;
+                    }
     </style>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body style="background-image:url('../Content/images/jungle.jpg')" >
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="border-radius:10px;">
-        <h2 style="font-size:30px;"><img src="~/Content/images/icon.png" style="width:50px;height:50px;"/>Nature</h2>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<body style="background-image:url('../../Content/images/Background/jungle3.jpg')">
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent" style="border-radius:1px;overflow:hidden;margin-top:-3%;">
+        <h2 style="font-size:30px;color:#1C1C1C"><img src="~/Content/images/Background/icon4.png" style="width:50px;height:50px;" />Jungles</h2>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active" href="~/Home/Index" style="font-size:30px; margin-bottom:12px;">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-link" href="~/Home/Comment" style="font-size:30px;margin-bottom:12px;">Comment</a>
+                <a class="nav-link active" href="~/Home/Index" style="font-size:15px; margin-bottom:12px;margin-left:4.5%;color:white;">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link active" href="~/Home/Index" style="font-size:15px; margin-bottom:12px;color:white; width:100px">About us</a>
+                <a class="nav-link active" href="~/Home/Index" style="font-size:15px; margin-bottom:12px;color:white;">Contacts</a>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Contacts
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+                <a class="nav-link active" href="~/Home/Comment" style="font-size:15px;margin-bottom:12px;color:white;">Comment</a>
             </div>
         </div>
     </nav>
     @RenderBody()
     @RenderSection("scripts", required: false)
-    <footer class="page-footer font-small teal pt-4 footer-bottom" style="background-color: #AAF0D1;border-radius: 10px;">
-        <div class="container-fluid text-center text-md-left fixed-bottom" style="background-color:white;border-radius:10px">
-            <div class="row">
-                <div class="col-md-6 mt-md-0 mt-3">
-                    <h5 class="text-uppercase font-weight-bold">Footer text 1</h5>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita sapiente sint, nulla, nihil
-                        repudiandae commodi voluptatibus corrupti animi sequi aliquid magnam debitis, maxime quam recusandae
-                        harum esse fugiat. Itaque, culpa?
-                    </p>
-                </div>
-                <hr class="clearfix w-100 d-md-none pb-3">
-                <div class="col-md-6 mb-md-0 mb-3">
-                    <h5 class="text-uppercase font-weight-bold">Footer text 2</h5>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio deserunt fuga perferendis modi earum
-                        commodi aperiam temporibus quod nulla nesciunt aliquid debitis ullam omnis quos ipsam, aspernatur id
-                        excepturi hic
-                    </p>
+    @*<footer>
+            <div class="container-fluid text-center text-md-left " style="background-color:white;border-radius:2px">
+                <div class="footer-copyright text-center py-3" style="position:relative;">
+                    © 2020 Copyright:
+                    <a href="https://itstep.by/">ITstep</a>
                 </div>
             </div>
-            <div class="footer-copyright text-center py-3 fixed-bottom" style="position:relative;">
-                © 2020 Copyright:
-                <a href="https://itstep.by/">ITstep</a>
-            </div>        
+        </footer>*@
+    <progress value="0">
+        <div class="progress-container fixed-bottom">
+            <span class="progress-bar fixed-bottom"></span>
         </div>
-    </footer>
+    </progress>
+    <script>
+        $(function () {
+            $(window).on("scroll resize", function () {
+                var o = $(window).scrollTop() / ($(document).height() - $(window).height());
+                $(".progress-bar").css({
+                    "width": (100 * o | 0) + "%"
+                });
+                $('progress')[0].value = o;
+            })
+        });
+    </script>
 </body>
 </html>

@@ -1,9 +1,9 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-@using SelfWork_1.Models
+@using SelfWork_1.Models.Animals
 @model IEnumerable<Animal>
-<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" style="margin-top:5%;">
    <ol class="carousel-indicators">
         @for (int i = 0; i < Model.ToList().Count; i++)
         {
@@ -26,7 +26,7 @@
                 {
                     <div class="carousel-item active">
                         <a href="~/Home/ShowAnimalsInfo?id=@Model.ToList()[i].Id">
-                            <img src= "@Model.ToList()[i].ImagePath" class="d-block w-100" alt="...">
+                            <img src= "" class="d-block w-100" alt="...">
                         </a>
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Second slide label</h5>
@@ -38,7 +38,7 @@
                 {
                     <div class="carousel-item">
                         <a href="~/Home/ShowAnimalsInfo?id=@Model.ToList()[i].Id">
-                            <img src="@Model.ToList()[i].ImagePath" class="d-block w-100" alt="...">
+                            <img src="" class="d-block w-100" alt="...">
                         </a>
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Second slide label</h5>

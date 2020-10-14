@@ -124,10 +124,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Animal.cs" />
-    <Compile Include="Models\Contexts\AnimalsContext.cs" />
-    <Compile Include="Models\Comment.cs" />
-    <Compile Include="Models\Contexts\CommentsContext.cs" />
+    <Compile Include="Models\Animals\Animal.cs" />
+    <Compile Include="Models\Animals\Context\AnimalsContext.cs" />
+    <Compile Include="Models\Animals\Video.cs" />
+    <Compile Include="Models\Comments\Comment.cs" />
+    <Compile Include="Models\Comments\Contexts\CommentsContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -137,11 +138,13 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\images\icon.png" />
-    <Content Include="Content\images\jungle.jpg" />
-    <Content Include="Content\images\monkey.jpg" />
-    <Content Include="Content\images\tigr.jpg" />
-    <Content Include="Content\images\zebra.jpg" />
+    <Content Include="Content\images\Background\icon.png" />
+    <Content Include="Content\images\Background\jungle.jpg" />
+    <Content Include="Content\images\Background\jungle2.jpg" />
+    <Content Include="Content\images\Background\jungle3.jpg" />
+    <Content Include="Content\images\Обезьяна.jpg" />
+    <Content Include="Content\images\Пантера.jpg" />
+    <Content Include="Content\images\Тигр.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />

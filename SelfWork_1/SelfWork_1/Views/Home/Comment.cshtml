@@ -1,11 +1,11 @@
 ﻿@{
     ViewBag.Title = "Comment";
 }
-@using SelfWork_1
-@model IEnumerable<SelfWork_1.Models.Comment>
+@using SelfWork_1.Models.Comments;
+@model IEnumerable<Comment>
 <main>
     <ol>
-        @foreach (SelfWork_1.Models.Comment item in Model)
+        @foreach (Comment item in Model)
         {
             <li style="display:flex;">
                 <div style="justify-content:start;">
