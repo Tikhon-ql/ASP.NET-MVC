@@ -3,7 +3,19 @@
 }
 @using SelfWork_1.Models.Comments;
 @model IEnumerable<Comment>
-<main>
+<style>
+    main{
+        margin:auto;
+        display:flex;
+    }
+    .comment {
+        position: absolute;
+        right: 2%;
+        top: 100%;
+       
+    }
+</style>
+<main class="col">
     <ol>
         @foreach (Comment item in Model)
         {
@@ -18,19 +30,19 @@
             </li>
         }
     </ol>
-    <h4>Можете добавить свой комментарий</h4>
-
-    @using (Html.BeginForm())
-    {
-        @Html.Hidden("Date", Model.ToList().Count + 1);
-        <div class="input-group flex-nowrap">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="addon-wrapping">N</span>
+    <div class="comment">
+        <h4 style="color:white">Можете добавить свой комментарий</h4>
+        @using (Html.BeginForm())
+        {
+            @Html.Hidden("Date", Model.ToList().Count + 1);
+            <div class="input-group flex-nowrap bg-transparent" style="margin:auto;">
+                <div class="input-group-prepend bg-transparent">
+                    <span class="input-group-text bg-transparent" id="addon-wrapping" style="color:white">N</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Nickname" aria-label="Nickname" aria-describedby="addon-wrapping" name="Nickname" required>
             </div>
-            <input type="text" class="form-control" placeholder="Nickname" aria-label="Nickname" aria-describedby="addon-wrapping" name="Nickname" required>
-        </div>
-        <textarea name="Text" style="margin:3.5%;border-radius:5px;width:60%;height:120px;" required></textarea><hr/>
-        <input type="submit" style="margin:30px;"/>
-    }
+            <textarea class="bg-transparent" name="Text" style="margin-top:2%;border-radius:5px;width:60%;height:120px;border-color:white;" required></textarea><hr style="border-color:white;">
+            <input type="submit" style="margin:10px;" />
+        }
+    </div>
 </main>
-

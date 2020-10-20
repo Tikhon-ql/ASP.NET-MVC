@@ -8,121 +8,66 @@
     <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet">
     <title>@ViewBag.Title – приложение ASP.NET</title>
     <style>
-            body {
-                background-repeat: no-repeat;
-                background-size:cover;
-                background-attachment: fixed;
-            }
-
-            main {
-                background-color: #AAF0D1;
-                margin: auto;
-                width: 80%;
-                margin-top: 50px;
-                border-radius: 10px;
-                margin-bottom: 50px;
-            }
-            .navbar{
-                background: rgba(0,0,0,0.5);
-            }
-            progress {
-                position: fixed;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 5px;
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                appearance: none;
-                border: none;
-                background: transparent;
-                color: #002c68;
-            }
-
-            progress::-webkit-progress-bar {
-                background: transparent;
-                border-radius: 5px;
-            }
-
-                progress::-webkit-progress-value {
-                    background: linear-gradient(to right, #FA3D00,#7D05FF);
-                    border-radius: 5px;
-                }                      
-
-                progress::-moz-progress-bar {
-                    background: linear-gradient(to right, #FA3D00,#7D05FF);
-                    border-radius: 5px;
-                }
-
-                .progress-container {
-                    width: 100%;
-                    background: transparent;
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    height: 5px;
-                    display: block;
-                }
-
-                .progress-bar {
-                    background: #002c68;
-                    width: 0%;
-                    display: block;
-                    height: inherit;
-                    }
-    </style>
+        body { 
+            background-image:url("../../Content/images/phone.jpg");
+            background-repeat:no-repeat;
+            background-size:cover;
+        }
+     </style>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    @*@Scripts.Render("~/bundles/modernizr")*@
 </head>
-<body style="background-image:url('../../Content/images/Background/jungle3.jpg')">
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent" style="border-radius:1px;overflow:hidden;margin-top:-3%;">
-        <h2 style="font-size:30px;color:#1C1C1C"><img src="~/Content/images/Background/icon4.png" style="width:50px;height:50px;" />Jungles</h2>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-link active" href="~/Home/Index" style="font-size:15px; margin-bottom:12px;margin-left:4.5%;color:white;">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-link active" href="~/Home/Index" style="font-size:15px; margin-bottom:12px;color:white; width:100px">About us</a>
-                <a class="nav-link active" href="~/Home/Index" style="font-size:15px; margin-bottom:12px;color:white;">Contacts</a>
-                <div class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<body style="display:none">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: black;margin-top:-50px">
+        <a class="navbar-brand" href="~/Home/Index" style="font-size:15px; margin-bottom:12px;margin-left:4.5%;color:white;">
+            <img src="~/Content/images/Background/ball.png" style="width:50px;height:50px;" />
+        </a>
+        <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse float-right" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item navli col">
+                    <a class="nav-link active " href="~/Home/Index" style="font-size:15px; color:white;">About us<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown col">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">
                         Contacts
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="dropdown-menu border-0" aria-labelledby="navbarDropdown" style="margin:0;background-color: black;">
+                        <a class="dropdown-item " href="#" style="color: white;">
+                            <img src="~/Content/images/Background/vk.png" style="width:25px;height:25px;" /> Vk
+                        </a>
+                        <a class="dropdown-item " style="color: white;" href="#"><img src="~/Content/images/Background/instagram.png" style="width:25px;height:25px;" />  Instagram</a>
+                        <a class="dropdown-item " style="color: white;" href="#"><img src="~/Content/images/Background/facebook.png" style="width:25px;height:25px;" />  Facebook</a>
                     </div>
-                </div>
-                <a class="nav-link active" href="~/Home/Comment" style="font-size:15px;margin-bottom:12px;color:white;">Comment</a>
-            </div>
+                </li>
+                <li class="nav-item col">
+                    <a class="nav-link active" href="~/Home/Index" style="font-size:15px; margin-bottom:12px;color:white; width:100px">Services</a>
+                </li>
+                <li class="nav-item col">
+                    <a class="nav-link active " href="~/Home/Comment" style="font-size:15px;color:white;">Comment</a>
+                </li>
+            </ul>
         </div>
     </nav>
     @RenderBody()
     @RenderSection("scripts", required: false)
-    @*<footer>
-            <div class="container-fluid text-center text-md-left " style="background-color:white;border-radius:2px">
-                <div class="footer-copyright text-center py-3" style="position:relative;">
-                    © 2020 Copyright:
-                    <a href="https://itstep.by/">ITstep</a>
-                </div>
-            </div>
-        </footer>*@
-    <progress value="0">
-        <div class="progress-container fixed-bottom">
-            <span class="progress-bar fixed-bottom"></span>
-        </div>
-    </progress>
     <script>
-        $(function () {
-            $(window).on("scroll resize", function () {
-                var o = $(window).scrollTop() / ($(document).height() - $(window).height());
-                $(".progress-bar").css({
-                    "width": (100 * o | 0) + "%"
-                });
-                $('progress')[0].value = o;
-            })
+        $(document).ready(function () {
+            var body = $("body");
+            body.fadeIn(400);
+            $(document).on("click", "a:not([href^='#']):not([href^='tel']):not([href^='mailto'])", function (e) {
+                e.preventDefault();
+                $(body).fadeOut(400);
+                var self = this;
+                setTimeout(function () {
+                    window.location.href = $(self).attr("href");
+                }, 400);
+            });
         });
     </script>
 </body>
