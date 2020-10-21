@@ -1,6 +1,4 @@
 ﻿using SelfWork_1.Models;
-using SelfWork_1.Models.Animals;
-using SelfWork_1.Models.Animals.Context;
 using SelfWork_1.Models.Comments;
 using SelfWork_1.Models.Comments.Context;
 using System;
@@ -11,12 +9,13 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.UI.WebControls;
 using System.IO;
+using SelfWork_1.Models.TeamPlayer.Context;
 
 namespace SelfWork_1.Controllers
 {
     public class HomeController : Controller
     {
-        AnimalsContext adb = new AnimalsContext();
+        TeamPlayersContext tdb = new TeamPlayersContext();
         CommentsContext cdb = new CommentsContext();
         public ActionResult Index()
         {
@@ -32,18 +31,7 @@ namespace SelfWork_1.Controllers
             //    }
             //    adb.SaveChanges();
             //}
-            return View(adb.Animals);
-        }
-        [HttpGet]
-        public ActionResult ShowAnimalsInfo(int? id)
-        {
-            Animal animal =  adb.Animals.FirstOrDefault(a => a.Id == id);
-            if (animal != null)
-            {
-                return View(animal);
-            }
-            else
-                return HttpNotFound();
+            return View();
         }
         [HttpGet]
         public ActionResult Comment()
@@ -57,6 +45,10 @@ namespace SelfWork_1.Controllers
             cdb.Comments.Add(comment);
             cdb.SaveChanges();
             return RedirectToAction("Comment");
+        }
+        public ActionResult AboutTeam()
+        {
+            return View(tdb.TeamPlayers);
         }
         public ActionResult About()
         {

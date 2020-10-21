@@ -2,8 +2,7 @@
     ViewBag.Title = "Home Page";
     Layout = "";
 }
-@using SelfWork_1.Models.Animals
-@model IEnumerable<Animal>
+
 @Scripts.Render("~/bundles/jquery")
 @Scripts.Render("~/bundles/bootstrap")
 @Styles.Render("~/Content/css")
@@ -83,7 +82,8 @@
         margin: 0;
         text-align: center;
         margin-top: 15%;
-        font-size: 50px;
+        font-size: 30px;
+        padding:50px;
     }
 
     .aboutTime {
@@ -134,7 +134,7 @@
                 </div>
             </nav>
             <div class="intro_title">
-                <a class="btn btn-dark bg-transparent" href="" style="font-size:50px;border-radius:50px" id="title"></a>
+                <a class="btn btn-dark bg-transparent" href="" style="border-radius:50px;padding:25px 50px 25px 50px" id="title"></a>
             </div>
         </div>
     </div>
