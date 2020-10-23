@@ -143,6 +143,13 @@
     <Content Include="Content\images\Background\Fone.jpg" />
     <Content Include="Content\images\Background\instagram.png" />
     <Content Include="Content\images\Background\vk.png" />
+    <Content Include="Content\images\LosAngelesLakers\player1.jpg" />
+    <Content Include="Content\images\LosAngelesLakers\player2.jpg" />
+    <Content Include="Content\images\LosAngelesLakers\player3.jpg" />
+    <Content Include="Content\images\LosAngelesLakers\player4.jpg" />
+    <Content Include="Content\images\LosAngelesLakers\player5.jpg" />
+    <Content Include="Content\images\LosAngelesLakers\player6.jpg" />
+    <Content Include="Content\images\LosAngelesLakers\player7.jpg" />
     <Content Include="Content\images\phone.jpg" />
     <Content Include="Content\videos\KobeBryant.mp4" />
     <Content Include="favicon.ico" />

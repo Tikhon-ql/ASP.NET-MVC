@@ -8,6 +8,7 @@ namespace SelfWork_1.Models.TeamPlayer
     public class TeamPlayer
     {
         public int Id { get; set; }
+        public string ImagePath { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public string CommandName { get; set; }
