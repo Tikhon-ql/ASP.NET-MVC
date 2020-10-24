@@ -14,7 +14,7 @@ namespace SelfWork_1.Models.TeamPlayer
         public string CommandName { get; set; }
         public string Position { get; set; }
         public int Weight { get; set; }
-        public int Height { get; set; }
+        public double Height { get; set; }
         public DateTime Bithday { get; set; }
     }
 }
