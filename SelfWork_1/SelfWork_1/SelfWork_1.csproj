@@ -137,12 +137,12 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\images\Background\AboutTimeFone.jpg" />
     <Content Include="Content\images\Background\ball.png" />
-    <Content Include="Content\images\Background\facebook.png" />
-    <Content Include="Content\images\Background\Fone.jpg" />
-    <Content Include="Content\images\Background\instagram.png" />
-    <Content Include="Content\images\Background\vk.png" />
+    <Content Include="Content\images\Background\phone.jpg" />
+    <Content Include="Content\images\Icons\comment.png" />
+    <Content Include="Content\images\Icons\facebook.png" />
+    <Content Include="Content\images\Icons\instagram.png" />
+    <Content Include="Content\images\Icons\vk.png" />
     <Content Include="Content\images\LosAngelesLakers\player1.jpg" />
     <Content Include="Content\images\LosAngelesLakers\player2.jpg" />
     <Content Include="Content\images\LosAngelesLakers\player3.jpg" />
@@ -150,7 +150,6 @@
     <Content Include="Content\images\LosAngelesLakers\player5.jpg" />
     <Content Include="Content\images\LosAngelesLakers\player6.jpg" />
     <Content Include="Content\images\LosAngelesLakers\player7.jpg" />
-    <Content Include="Content\images\phone.jpg" />
     <Content Include="Content\videos\KobeBryant.mp4" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />

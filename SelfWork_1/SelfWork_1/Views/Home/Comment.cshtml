@@ -6,30 +6,45 @@
 <style>
     main{
         margin:auto;
-        display:flex;
+        position:relative;
     }
     .comment {
         position: absolute;
-        right: 2%;
-        top: 100%;
-       
+        right:0;
+        top:25px;
+    }
+    ol{
+        margin-top:25px;
+        background:white;
+        border-radius:10px;
+        padding:50px;
+        list-style:none;
+        position:absolute;
+        overflow:hidden;
+    }
+    ol li{
+        background:gray;
+        padding:7px;
+        border-radius:5px;
+        margin:10px;
     }
 </style>
 <main class="col">
-    <ol>
-        @foreach (Comment item in Model)
-        {
-            <li style="display:flex;">
-                <div style="justify-content:start;">
-                    <p>@item.Nickname:</p>
-                    <p>@item.Date</p>
-                </div>
-                <div style="justify-content:end;">
-                    <p>@item.Text</p>
-                </div> 
-            </li>
-        }
-    </ol>
+    @if (Model.ToList().Count != 0)
+    {
+        <ol>
+            <h2>Comments</h2>
+            @foreach (Comment item in Model)
+            {
+                <li>
+                    <div style="justify-content:start;">
+                        <p>@item.Nickname: @item.Text</p>
+                        <p>@item.Date</p>
+                    </div>
+                </li>
+            }
+        </ol>
+    }
     <div class="comment">
         <p style="color:white;font-size:15px;font-weight:100;padding-right:150px">Можете добавить свой комментарий</p>
         @using (Html.BeginForm())
@@ -41,7 +56,7 @@
                 </div>
                 <input type="text" class="form-control" placeholder="Nickname" aria-label="Nickname" aria-describedby="addon-wrapping" name="Nickname" required>
             </div>
-            <textarea class="bg-transparent" name="Text" style="margin-top:2%;border-radius:5px;width:60%;height:120px;border-color:white;" required></textarea><hr style="border-color:white;">
+            <textarea class="bg-transparent " name="Text" style="margin-top:2%;border-radius:5px;width:60%;height:120px;border-color:white;color:white;" required></textarea><hr style="border-color:white;">
             <input type="submit" style="margin:10px;" />
         }
     </div>
