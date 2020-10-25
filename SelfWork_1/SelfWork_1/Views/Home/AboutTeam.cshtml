@@ -29,7 +29,7 @@
                         <div class="carousel-item active">
                             <div style="display:flex;">
                                 <img class="d-block w-50" src="@Model.ToList()[i].ImagePath" style="justify-content:start;overflow:hidden;border-radius:15px">
-                                <form style="justify-content:end;background:#fff;padding:50px;border-radius:15px">
+                                <form style="justify-content:end;background:#fff;padding:50px;border-radius:15px;">
                                     <p><b>Дата рождения:</b> @Model.ToList()[i].Bithday.ToShortDateString() (@(DateTime.Now.Year - Model.ToList()[i].Bithday.Year) лет)</p>
                                     <p><b>Имя:</b> @Model.ToList()[i].Name</p>
                                     <p><b>Фамилия:</b> @Model.ToList()[i].Surname</p>
